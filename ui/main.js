@@ -9,6 +9,6 @@ element.innerHTML='Hey Sandy';
 var img=document.getElementById('madi');
 
 img.onClick= function(){
-    alert(img);
+    alert('onclick '+img);
     img.style.marginLeft='100px';
 };
