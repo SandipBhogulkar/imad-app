@@ -7,7 +7,7 @@ element.innerHTML='Hey Sandy';*/
 
 //move image
 var img=document.getElementById('madi');
-alert('get'+img);
+//alert('get'+img);
 
 var marginLeft=0;
 
@@ -31,7 +31,7 @@ button.onclick=function(){
     
     
      //Take action
-     request.onReadyStateChange=function(){
+     request.onreadyStateChange=function(){
               if(request.readyState==XMLHttpRequest.Done){
            
                     if(request.status==200)
