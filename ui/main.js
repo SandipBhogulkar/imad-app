@@ -31,22 +31,25 @@ button.onclick=function(){
     
     
      //Take action
-     request.onReadyStateChange=function();
-    if(request.readyState==XMLHttpRequest.Done){
-       
-        if(request.status==200)
-        {
-            var counter=request.responseText();
-            var span =document.getElementById('count');
-             span.innerHTML=counter.toString();
-        }
-    }
+     request.onReadyStateChange=function(){
+              if(request.readyState==XMLHttpRequest.Done){
+           
+                    if(request.status==200)
+                    {
+                        var counter=request.responseText();
+                        var span =document.getElementById('count');
+                         span.innerHTML=counter.toString();
+                    }
+             }
+     };
+   
     
     
     //capture the response and store in variable
    
     
-    
+    request.open('GET','http://bhogulkarsandip.imad.hasura-app.io/counter',true)
+    request.send(null);
     
     //render the variable in correct span
     //counter=counter+1;
