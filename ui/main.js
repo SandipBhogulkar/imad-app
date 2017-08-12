@@ -28,15 +28,16 @@ button.onclick=function(){
     //creare a request object
     var request=new XMLHttpRequest();
     
-    
+    alert('request'+request);
     
      //Take action
      request.onreadyStateChange=function(){
               if(request.readyState==XMLHttpRequest.Done){
-           
+           alert('ready');
                     if(request.status==200)
                     {
                         var counter=request.responseText();
+                        alert('counter'+counter);
                         var span =document.getElementById('count');
                          span.innerHTML=counter.toString();
                     }
