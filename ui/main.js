@@ -8,7 +8,7 @@ element.innerHTML='Hey Sandy';
 //move image
 var img=document.getElementById('madi');
 alert('get'+img);
-img.onClick= function(){
+img.onclick= function(){
     alert('onclick '+img);
     img.style.marginLeft='100px';
 };
