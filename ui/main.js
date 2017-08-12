@@ -37,7 +37,7 @@ button.onclick=function(){
            alert('ready');
                     if(request.status==200)
                     {
-                        var counter=request.responseText();
+                        var counter=request.responseText;
                         alert('counter'+counter);
                         var span =document.getElementById('count');
                          span.innerHTML=counter.toString();
