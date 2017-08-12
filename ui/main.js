@@ -31,7 +31,7 @@ button.onclick=function(){
     alert('request'+request);
     
      //Take action
-     request.onreadyStateChange=function(){
+     request.onreadystatechange=function(){
               if(request.readyState==XMLHttpRequest.Done){
            alert('ready');
                     if(request.status==200)
