@@ -136,10 +136,12 @@ app.get('/article/:articleName',function(req,res){
     pool.query("select * from article where title= '"+ req.params.articleName +"'",function(err,result){
         if(err)
         {
+            alert('errr if');
             res.status(500).send(err.toString());
         }
         else
         {
+            alert('else');
             if(result.rows.lenght===0)
             {
                 res.status(404).send('article not found');
