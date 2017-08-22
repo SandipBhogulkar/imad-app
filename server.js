@@ -133,7 +133,7 @@ app.get('/counter',function(req,res){
 app.get('/article/:articleName',function(req,res){
     var articleName= req.params.articleName;
     
-    pool.query("select * from article where title= '"+req.params.articleName+"'",functio(err,result){
+    pool.query("select * from article where title= '"+req.params.articleName+"'",function(err,result){
         if(err)
         {
             res.status(500).send(err.toString());
