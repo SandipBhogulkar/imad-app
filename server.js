@@ -130,8 +130,28 @@ app.get('/counter',function(req,res){
 });
 
 
-app.get('/:articleName',function(req,res){
+app.get('/article/:articleName',function(req,res){
     var articleName= req.params.articleName;
+    
+    pool.query("select * from article where title= '"+req.params.articleName+"'",functio(err,result){
+        if(err)
+        {
+            res.status(500).send(err.toString());
+        }
+        else
+        {
+            if(result.rows.lenght==0)
+            {
+                res.status(404).send('article not found');
+            }
+            else
+            {
+                var articleData=result.rows[0];
+                res.send(createTemplate(articleData));
+            }
+        }
+    });
+    
     res.send(createTemplate(articles[articleName]))
 });
 
