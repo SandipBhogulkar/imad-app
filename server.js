@@ -140,7 +140,7 @@ app.get('/article/:articleName',function(req,res){
         }
         else
         {
-            if(result.rows.lenght==0)
+            if(result.rows.lenght===0)
             {
                 res.status(404).send('article not found');
             }
