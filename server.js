@@ -105,7 +105,7 @@ app.get('/ui/main.js',function(req,res){
 var pool=new pool(config);
 app.get('/test-db',function(req,res){
    //make a request
-   pool.QUERY('select * from user',function(err,result){
+   pool.query('select * from user',function(err,result){
        if(err){
            res.status(500).send(err.toString());
        }
