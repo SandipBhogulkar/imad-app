@@ -132,7 +132,7 @@ app.get('/counter',function(req,res){
 
 app.get('/article/:articleName',function(req,res){
     //var articleName= req.params.articleName;
-    
+    alert('article');
     pool.query("select * from article where title= '"+ req.params.articleName +"'",function(err,result){
         if(err)
         {
