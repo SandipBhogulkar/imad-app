@@ -62,7 +62,7 @@ var articles={
 
 var htmlTemplate=` <html>
     <head>
-        <title>${title}
+        <title>${heading}
         </title>
         <meta name='viewport' content='width=device-width,initial-scale=1 ' />
          <link href="/ui/style.css" rel="stylesheet" />
@@ -75,7 +75,7 @@ var htmlTemplate=` <html>
                 <div>
                     <a href="/">Home</a>
                     <h1>
-                        ${heading}
+                        ${title}
                     </h1>
                     
                 </div>
