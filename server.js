@@ -1,7 +1,7 @@
 var express = require('express');
 var morgan = require('morgan');
 var path = require('path');
-var pool=require('pg').pool;
+var Pool=require('pg').Pool;
 //const { Pool } = require('pg');
 
 var config={
@@ -104,8 +104,8 @@ app.get('/ui/main.js',function(req,res){
     res.sendFile(path.join(__dirname,'ui','main.js'))
 });
 
-//var pool=new pool(config);
-const pool = new Pool();
+var pool=new Pool(config);
+//const pool = new Pool();
 
 app.get('/test-db',function(req,res){
    //make a request
