@@ -107,7 +107,7 @@ app.get('/ui/main.js',function(req,res){
 var pool=new Pool(config);
 //const pool = new Pool();
 
-app.get('/test-db',function(req,res){
+app.get('/user-db',function(req,res){
    //make a request
    pool.query('select * from user',function(err,result){
        if(err){
