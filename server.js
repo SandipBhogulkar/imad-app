@@ -2,7 +2,10 @@ var express = require('express');
 var morgan = require('morgan');
 var path = require('path');
 var Pool=require('pg').Pool;
-va crypto=require('crypto');
+var crypto=require('crypto');
+
+
+
 //const { Pool } = require('pg');
 
 var config={
