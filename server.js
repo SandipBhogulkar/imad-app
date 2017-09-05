@@ -174,7 +174,7 @@ app.get('/ui/madi.png', function (req, res) {
 });
 
 function hash ( input, salt){
-    alert(salt+' '+input);
+   // alert(salt+' '+input);
     var hashed=crypto.pbkdf2Sync('secret', salt, 100000, 512, 'sha512');
     return hashed.toString('hex');
 }
