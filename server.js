@@ -178,7 +178,7 @@ function hash(input,salt){
 }
 app.get('/hash/:input',function(req,res){
    
-   var hashedString=hash(req.params.input,'sandip');
+   var hashedString=hash(req.params.input,'this is sandip');
    res.send(hashedString);
 });
 // Do not change port, otherwise your app won't run on IMAD servers
