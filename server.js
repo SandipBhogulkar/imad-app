@@ -173,12 +173,12 @@ app.get('/ui/madi.png', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'madi.png'));
 });
 function hash(input,salt){
-    var hashed=crypto.pbkdf2Sync('secret', 'salt', 100000, 512, 'sandip');
+    var hashed=crypto.pbkdf2Sync('secret', 'salt', 100000, 512, 'sha512');
     return hashed.toString('hex');
 }
 app.get('/hash/:input',function(req,res){
    
-   var hashedString=hash(req.params.input,salt);
+   var hashedString=hash(req.params.input,'sandip');
    res.send(hashedString);
 });
 // Do not change port, otherwise your app won't run on IMAD servers
